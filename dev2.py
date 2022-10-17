@@ -1,1 +1,1 @@
-print ('leo')
+print ('o')
