@@ -102,3 +102,39 @@ def gera_ajuda(dic):
         gab2=dic_opcoes[item2]
         st=f'''DICA:\nOpções certamente erradas: {gab1} | {gab2}'''
     return st
+
+def valida_questoes(lista):
+    final=[]
+    for questao in lista:
+        valida=valida_questao(questao)
+        final.append(valida)
+    return final
+
+import random
+def sorteia_questao(dic,nivel):
+    
+    for k,lista in dic.items():
+        if k==nivel:
+            elemento=random.choice(lista)
+    return elemento
+
+def sorteia_questao_inedida(dic,nivel,lista):
+    while True:
+        questao=sorteia_questao(dic,nivel)
+        if questao not in lista:
+            lista.append(questao)
+            break
+    return questao
+
+def questao_para_texto(dicionario,n):
+    st=f'''----------------------------------------
+QUESTAO {n}
+
+{dicionario['titulo']}
+
+RESPOSTAS:
+A: {dicionario['opcoes']['A']}
+B: {dicionario['opcoes']['B']}
+C: {dicionario['opcoes']['C']}
+D: {dicionario['opcoes']['D']}'''
+    return st
