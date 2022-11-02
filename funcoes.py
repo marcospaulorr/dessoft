@@ -112,19 +112,15 @@ def valida_questoes(lista):
 
 import random
 def sorteia_questao(dic,nivel):
-    
-    for k,lista in dic.items():
-        if k==nivel:
-            elemento=random.choice(lista)
-    return elemento
-
+    dicionario=dic[nivel]
+    x=random.choice(dicionario)
+    return x
 def sorteia_questao_inedida(dic,nivel,lista):
-    while True:
-        questao=sorteia_questao(dic,nivel)
-        if questao not in lista:
-            lista.append(questao)
-            break
-    return questao
+    x=sorteia_questao(dic,nivel)
+    while x in lista:
+        x=sorteia_questao(dic,nivel)
+    lista.append(x)
+    return x
 
 def questao_para_texto(dicionario,n):
     st=f'''----------------------------------------
