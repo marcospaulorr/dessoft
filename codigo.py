@@ -4,8 +4,43 @@ from basedequestoes import quest
 dic_questoes = funcoes.transforma_base(quest)
 lista_questoes_sorteadas=[]
 
-#validando a base de dados!
+#validando a base de dados (faceis)!
+lista_facil=dic_questoes['facil']
+lista_facil_validada=funcoes.valida_questoes(lista_facil)
+nova_lista_facil=[]
+for i in range(0,len(lista_facil)):
+    if lista_facil_validada[i]=={}:
+        nova_lista_facil.append(lista_facil[i])
 
+#mudando o dicionário
+
+dic_questoes['facil']=nova_lista_facil
+
+
+#validando a base de dados (medio)!
+lista_medio=dic_questoes['medio']
+lista_medio_validada=funcoes.valida_questoes(lista_medio)
+nova_lista_medio=[]
+for i in range(0,len(lista_medio)):
+    if lista_medio_validada[i]=={}:
+        nova_lista_medio.append(lista_medio[i])
+
+#mudando o dicionário
+
+dic_questoes['medio']=nova_lista_medio
+
+
+#validando a base de dados (dificil)!
+lista_dificil=dic_questoes['dificil']
+lista_dificil_validada=funcoes.valida_questoes(lista_dificil)
+nova_lista_dificil=[]
+for i in range(0,len(lista_dificil)):
+    if lista_dificil_validada[i]=={}:
+        nova_lista_dificil.append(lista_facil[i])
+
+#mudando o dicionário
+
+dic_questoes['dificil']=nova_lista_dificil
 
 
 print('\033[32mOlá! Você está jogando Fortuna DesSoft e terá a oportunidade de enriquecer!\033[m\n')
