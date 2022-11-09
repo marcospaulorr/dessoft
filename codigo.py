@@ -6,7 +6,7 @@ lista_questoes_sorteadas=[]
 
 
 
-print('Olá! Você está jogando Fortuna DesSoft e terá a oportunidade de enriquecer!\n')
+print('\033[32mOlá! Você está jogando Fortuna DesSoft e terá a oportunidade de enriquecer!\033[m\n')
 nome=str(input('Qual é seu nome?\n'))
 
 quer_reiniciar='S'
@@ -16,7 +16,7 @@ while quer_reiniciar=='S':
     enter=input('Aperte ENTER para continuar...\n')
     print('O jogo já vai começar! Lá vem a primeira questão! \n')
 
-    print('Vamos começar com questões do nível FACIL!\n')
+    print('\033[32mVamos começar com questões do nível FACIL!\033[m\n')
     enter1=input('Aperte ENTER para continuar...\n')
     pula=0
     ajuda=0
@@ -67,7 +67,7 @@ while quer_reiniciar=='S':
             resp=str(input('Qual sua resposta?!'))
 
             while resp not in lista_opcoes:
-                print('Opção inválida!\n')
+                print('\033[31mOpção inválida!\033[m\n')
                 print('As opções de resposta são "A", "B", "C", "D", "ajuda", "pula" e "parar"!\n')
                 resp=str(input('Qual sua resposta?!\n'))
 
@@ -75,11 +75,11 @@ while quer_reiniciar=='S':
             if resp=='ajuda':
                 while resp=='ajuda':
                     if ja_pediu_ajuda==1:
-                        print('Não deu! Você já pediu ajuda nesta questão!\n')
+                        print('\033[31mNão deu! Você já pediu ajuda nesta questão!\033[m\n')
                         print(texto_questao)
                         resp=str(input('Qual sua resposta?!\n'))
                     elif ajuda==2:
-                        print('Não deu! Você não tem mais direito a ajudas!\n')
+                        print('\033[31mNão deu! Você não tem mais direito a ajudas!\033[m\n')
                         print(texto_questao)
                         resp=str(input('Qual sua resposta?!\n'))
                     elif ajuda==1:
@@ -98,13 +98,13 @@ while quer_reiniciar=='S':
             #mudei de elif pra if
             if resp=='pula':
                 if pula==3:
-                    print('Não deu! Você não tem mais direito a pulos!\n')
+                    print('\033[31mNão deu! Você não tem mais direito a pulos!\033[m\n')
 
                     while resp=='pula':
                         print(texto_questao)
                         resp=str(input('Qual sua resposta?!\n'))
                         if resp=='pula':
-                            print('Não deu! Você não tem mais direito a pulos!\n')
+                            print('\033[31mNão deu! Você não tem mais direito a pulos!\033[m\n')
                     break
                 elif pula==2:
                     pula+=1
@@ -120,11 +120,11 @@ while quer_reiniciar=='S':
                     break
 
             elif resp=='parar':
-                deseja_parar=str(input('Deseja mesmo parar [S/N]??\n'))
+                deseja_parar=str(input('\033[31mDeseja mesmo parar [S/N]??\033[m\n'))
                 if deseja_parar=='S':
                     decidiu_parar=1
                     valor=lista_valores[acertou_quantas_vezes]
-                    print(f'Ok! Você parou e seu prêmio é de R$ {valor}.00\n')
+                    print(f'\033[32mOk! Você parou e seu prêmio é de R$ {valor}.00\033[m\n')
                     break
             
             if resp in ['A','B','C','D']:
@@ -136,16 +136,16 @@ while quer_reiniciar=='S':
             if resp==alternativa_correta:
                 if acertou_quantas_vezes==8:
                     acertou_quantas_vezes+=1
-                    print('PARABÉNS, você zerou o jogo e ganhou um milhão de reais!\n')
+                    print('\033[32mPARABÉNS, você zerou o jogo e ganhou um milhão de reais!\033[m\n')
                     decidiu_parar=1
                     break
                 else:
                     acertou_quantas_vezes+=1
                     valor=lista_valores[acertou_quantas_vezes]
-                    print(f'Você acertou! Seu prêmio atual é de R$ {valor}.00\n')
+                    print(f'\033[32mVocê acertou! Seu prêmio atual é de R$ {valor}.00\033[m\n')
 
             elif resp!=alternativa_correta:
-                print('Que pena! Você errou e vai sair sem nada :(\n')
+                print('\033[31mQue pena! Você errou e vai sair sem nada :(\033[m\n')
                 decidiu_parar=1
                 break
 
@@ -153,7 +153,7 @@ while quer_reiniciar=='S':
 
     #jogos medios
     if decidiu_parar==0:
-        print('HEY! Você passou para o nível MEDIO!\n')
+        print('\033[32mHEY! Você passou para o nível MEDIO!\033[m\n')
 
     while True:
         ja_pediu_ajuda=0
@@ -178,7 +178,7 @@ while quer_reiniciar=='S':
             resp=str(input('Qual sua resposta?!\n'))
 
             while resp not in lista_opcoes:
-                print('Opção inválida!\n')
+                print('\033[31mOpção inválida!\033[m\n')
                 print('As opções de resposta são "A", "B", "C", "D", "ajuda", "pula" e "parar"!\n')
                 resp=str(input('Qual sua resposta?!\n'))
 
@@ -186,11 +186,11 @@ while quer_reiniciar=='S':
             if resp=='ajuda':
                 while resp=='ajuda':
                     if ja_pediu_ajuda==1:
-                        print('Não deu! Você já pediu ajuda nesta questão!\n')
+                        print('\033[31mNão deu! Você já pediu ajuda nesta questão!\033[m\n')
                         print(texto_questao)
                         resp=str(input('Qual sua resposta?!\n'))
                     elif ajuda==2:
-                        print('Não deu! Você não tem mais direito a ajudas!\n')
+                        print('\033[31mNão deu! Você não tem mais direito a ajudas!\033[m\n')
                         print(texto_questao)
                         resp=str(input('Qual sua resposta?!\n'))
                     elif ajuda==1:
@@ -209,13 +209,13 @@ while quer_reiniciar=='S':
 
             if resp=='pula':
                 if pula==3:
-                    print('Não deu! Você não tem mais direito a pulos!\n')
+                    print('\033[31mNão deu! Você não tem mais direito a pulos!\033[m\n')
 
                     while resp=='pula':
                         print(texto_questao)
                         resp=str(input('Qual sua resposta?!\n'))
                         if resp=='pula':
-                            print('Não deu! Você não tem mais direito a pulos!\n')
+                            print('\033[31mNão deu! Você não tem mais direito a pulos!\033[m\n')
                     break
                 elif pula==2:
                     pula+=1
@@ -235,7 +235,7 @@ while quer_reiniciar=='S':
                 if deseja_parar=='S':
                     decidiu_parar=1
                     valor=lista_valores[acertou_quantas_vezes]
-                    print(f'Ok! Você parou e seu prêmio é de R$ {valor}.00\n')
+                    print(f'\033[32mOk! Você parou e seu prêmio é de R$ {valor}.00\033[m\n')
                     break
 
             if resp in ['A','B','C','D']:
@@ -248,23 +248,23 @@ while quer_reiniciar=='S':
             if resp==alternativa_correta:
                 if acertou_quantas_vezes==8:
                     acertou_quantas_vezes+=1
-                    print('PARABÉNS, você zerou o jogo e ganhou um milhão de reais!\n')
+                    print('\033[32mPARABÉNS, você zerou o jogo e ganhou um milhão de reais!\033[m\n')
                     decidiu_parar=1
                     break
                 else:
                     acertou_quantas_vezes+=1
                     valor=lista_valores[acertou_quantas_vezes]
-                    print(f'Você acertou! Seu prêmio atual é de R$ {valor}.00\n')
+                    print(f'\033[32mVocê acertou! Seu prêmio atual é de R$ {valor}.00\033[m\n')
 
             elif resp!=alternativa_correta:
-                print('Que pena! Você errou e vai sair sem nada :(\n')
+                print('\033[31mQue pena! Você errou e vai sair sem nada :(\033[m\n')
                 decidiu_parar=1
                 break
 
 
     #jogos dificeis
     if decidiu_parar==0:
-        print('HEY! Você passou para o nível DIFICIL!\n')
+        print('\033[32mHEY! Você passou para o nível DIFICIL!\033[m\n')
 
     while True:
         ja_pediu_ajuda=0
@@ -289,7 +289,7 @@ while quer_reiniciar=='S':
             resp=str(input('Qual sua resposta?!\n'))
 
             while resp not in lista_opcoes:
-                print('Opção inválida!')
+                print('\033[31mOpção inválida!\033[m')
                 print('As opções de resposta são "A", "B", "C", "D", "ajuda", "pula" e "parar"!\n')
                 resp=str(input('Qual sua resposta?!'))
 
@@ -297,11 +297,11 @@ while quer_reiniciar=='S':
             if resp=='ajuda':
                 while resp=='ajuda':
                     if ja_pediu_ajuda==1:
-                        print('Não deu! Você já pediu ajuda nesta questão!\n')
+                        print('\033[31mNão deu! Você já pediu ajuda nesta questão!\033[m\n')
                         print(texto_questao)
                         resp=str(input('Qual sua resposta?!\n'))
                     elif ajuda==2:
-                        print('Não deu! Você não tem mais direito a ajudas!\n')
+                        print('\033[31mNão deu! Você não tem mais direito a ajudas!\033[m\n')
                         print(texto_questao)
                         resp=str(input('Qual sua resposta?!\n'))
                     elif ajuda==1:
@@ -320,13 +320,13 @@ while quer_reiniciar=='S':
 
             if resp=='pula':
                 if pula==3:
-                    print('Não deu! Você não tem mais direito a pulos!\n')
+                    print('\033[31mNão deu! Você não tem mais direito a pulos!\033[m\n')
 
                     while resp=='pula':
                         print(texto_questao)
                         resp=str(input('Qual sua resposta?!'))
                         if resp=='pula':
-                            print('Não deu! Você não tem mais direito a pulos!\n')
+                            print('\033[31mNão deu! Você não tem mais direito a pulos!\033[m\n')
                     break
                 elif pula==2:
                     pula+=1
@@ -346,7 +346,7 @@ while quer_reiniciar=='S':
                 if deseja_parar=='S':
                     decidiu_parar=1
                     valor=lista_valores[acertou_quantas_vezes]
-                    print(f'Ok! Você parou e seu prêmio é de R$ {valor}.00\n')
+                    print(f'\033[32mOk! Você parou e seu prêmio é de R$ {valor}.00\033[m\n')
                     break
 
             if resp in ['A','B','C','D']:
@@ -359,16 +359,16 @@ while quer_reiniciar=='S':
             if resp==alternativa_correta:
                 if acertou_quantas_vezes==8:
                     acertou_quantas_vezes+=1
-                    print('PARABÉNS, você zerou o jogo e ganhou um milhão de reais!\n')
+                    print('\033[32mPARABÉNS, você zerou o jogo e ganhou um milhão de reais!\033[m\n')
                     decidiu_parar=1
                     break
                 else:
                     acertou_quantas_vezes+=1
                     valor=lista_valores[acertou_quantas_vezes]
-                    print(f'Você acertou! Seu prêmio atual é de R$ {valor}.00\n')
+                    print(f'\033[32mVocê acertou! Seu prêmio atual é de R$ {valor}.00\033[m\n')
 
             elif resp!=alternativa_correta:
-                print('Que pena! Você errou e vai sair sem nada :(\n')
+                print('\033[31mQue pena! Você errou e vai sair sem nada :(\033[m\n')
                 decidiu_parar=1
                 break
 
