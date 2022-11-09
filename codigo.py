@@ -4,6 +4,8 @@ from basedequestoes import quest
 dic_questoes = funcoes.transforma_base(quest)
 lista_questoes_sorteadas=[]
 
+#validando a base de dados!
+
 
 
 print('\033[32mOlá! Você está jogando Fortuna DesSoft e terá a oportunidade de enriquecer!\033[m\n')
