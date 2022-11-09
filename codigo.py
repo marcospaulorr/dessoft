@@ -43,6 +43,18 @@ for i in range(0,len(lista_dificil)):
 dic_questoes['dificil']=nova_lista_dificil
 
 
+questao_errada=0
+if len(nova_lista_facil)!=len(lista_facil):
+    decidiu_parar=1
+    questao_errada=1
+if len(nova_lista_medio)!=len(lista_medio):
+    decidiu_parar=1
+    questao_errada=1
+if len(nova_lista_dificil)!=len(lista_dificil):
+    decidiu_parar=1
+    questao_errada=1
+
+
 print('\033[32mOlá! Você está jogando Fortuna DesSoft e terá a oportunidade de enriquecer!\033[m\n')
 nome=str(input('Qual é seu nome?\n'))
 
@@ -411,7 +423,8 @@ while quer_reiniciar=='S':
 
     quer_reiniciar=str(input('Deseja reiniciar o jogo?! [S/N] \n'))
 
-
+if questao_errada==1:
+    print('\033[31mOPA!! Alguma questão da base de dados está ERRADA!!\033[m')
 
 
 

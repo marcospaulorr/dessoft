@@ -3,6 +3,16 @@ quest = [{'titulo': 'Qual o resultado da operação 57 + 32?',
           'opcoes': {'A': '-19', 'B': '85', 'C': '89', 'D': '99'},
           'correta': 'C'},
 
+          {'titulo':'Qual é o melhor time de futebol do Ceará?',
+          'nivel':'facil',
+          'opcoes':{'A':'Ceará','B':'Time Come Manga','C':'Baryern','D':'Real Madrid'},
+          'correta':'A'},
+
+          {'titulo':'Quanto 7+13?',
+          'nivel':'facil',
+          'opcoes':{'A':'11','B':'8','C':'20','D':'21'},
+          'correta':'C'},
+
          {'titulo': 'Qual a capital do Brasil?',
           'nivel': 'facil',
           'opcoes': {'A': 'Brasília', 'B': 'Rio de janeiro', 'C': 'São Paulo', 'D': 'Osasco'},
