@@ -1,5 +1,6 @@
 import funcoes
 from basedequestoes import quest
+
 #inicio do codigo!!!!!
 dic_questoes = funcoes.transforma_base(quest)
 lista_questoes_sorteadas=[]
