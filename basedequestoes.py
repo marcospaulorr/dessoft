@@ -8,9 +8,54 @@ quest = [{'titulo': 'Qual o resultado da operação 57 + 32?',
           'opcoes':{'A':'Ceará','B':'Time Come Manga','C':'Baryern','D':'Real Madrid'},
           'correta':'A'},
 
+          {'titulo':'Qual é o número do mês que tem menos do que 30 dias?',
+          'nivel':'facil',
+          'opcoes':{'A':'1','B':'2','C':'9','D':'8'},
+          'correta':'B'},
+
           {'titulo':'Quanto 7+13?',
           'nivel':'facil',
           'opcoes':{'A':'11','B':'8','C':'20','D':'21'},
+          'correta':'C'},
+
+          {'titulo':'Quanto 30+50?',
+          'nivel':'facil',
+          'opcoes':{'A':'11','B':'8','C':'80','D':'21'},
+          'correta':'C'},
+
+          {'titulo':'Quanto 7*13?',
+          'nivel':'facil',
+          'opcoes':{'A':'11','B':'8','C':'91','D':'21'},
+          'correta':'C'},
+
+          {'titulo':'Qual é a capital do Ceará?',
+          'nivel':'facil',
+          'opcoes':{'A':'Quixeramobim','B':'Iguatu','C':'Fortaleza','D':'São José'},
+          'correta':'C'},
+
+          {'titulo':'Qual foi o último campeão brasileiro no futebol?',
+          'nivel':'facil',
+          'opcoes':{'A':'Santos','B':'Goiás','C':'Palmeiras','D':'Flamengo'},
+          'correta':'C'},
+
+          {'titulo':'Qual foi o time brasileiro que o Pelé jogou?',
+          'nivel':'facil',
+          'opcoes':{'A':'Fortaleza','B':'Cuiabá','C':'Santos','D':'Flamengo'},
+          'correta':'C'},
+
+          {'titulo':'Qual é clube o Neymar joga atualmente?',
+          'nivel':'facil',
+          'opcoes':{'A':'PSG','B':'Santos','C':'Flamengo','D':'Shaktar'},
+          'correta':'A'},
+
+          {'titulo':'Quanto 7+12?',
+          'nivel':'facil',
+          'opcoes':{'A':'11','B':'8','C':'19','D':'21'},
+          'correta':'C'},
+
+          {'titulo':'Como é chamada a medida de inflação para os produtores?',
+          'nivel':'facil',
+          'opcoes':{'A':'IPCA','B':'IGP','C':'IGPM','D':'EBITDA'},
           'correta':'C'},
 
          {'titulo': 'Qual a capital do Brasil?',
@@ -113,6 +158,17 @@ quest = [{'titulo': 'Qual o resultado da operação 57 + 32?',
           'opcoes': {'A': 'Cristiano Ronaldo', 'B': 'Dwayne Johnson', 'C': 'Kim Kardashian', 'D': 'Kylie Jenner'},
           'correta': 'D'},
 
+          {'titulo': 'Como faço para chamar a Polícia?',
+          'nivel': 'medio',
+          'opcoes': {'A': 'Ligue 101', 'B': 'Ligue 192', 'C': 'Ligue 190', 'D': 'Ligue 122'},
+          'correta': 'C'},
+
+          {'titulo': 'Quantos números pares primos existem?',
+          'nivel': 'medio',
+          'opcoes': {'A': '0', 'B': '1', 'C': 'infinitos', 'D': '2'},
+          'correta': 'B'},
+
+
          {'titulo': 'Qual a pessoa mais seguida no Instagram?',
           'nivel': 'medio',
           'opcoes': {'A': 'Cristiano Ronaldo', 'B': 'Dwayne Johnson', 'C': 'Kim Kardashian', 'D': 'Lionel Messi'},
@@ -166,5 +222,33 @@ quest = [{'titulo': 'Qual o resultado da operação 57 + 32?',
          {'titulo': 'O que é Necrose?',
           'nivel': 'dificil',
           'opcoes': {'A': 'Uma banda de Rock', 'B': 'Uma marca de luxo', 'C': 'Cidade Francesa', 'D': 'Morte de tecido orgânico'},
+          'correta': 'D'},
+
+          {'titulo': 'Quanto é 12*9?',
+          'nivel': 'dificil',
+          'opcoes': {'A': '81', 'B': '29', 'C': '105', 'D': '108'},
+          'correta': 'D'},
+
+          {'titulo': 'Quem foi o último ganhador da Champions?',
+          'nivel': 'dificil',
+          'opcoes': {'A': 'Real Madrid', 'B': 'Vasco', 'C': 'Juventus', 'D': 'Santos'},
+          'correta': 'A'},
+
+          {'titulo': 'Qual é o número atômico do oxigênio?',
+          'nivel': 'dificil',
+          'opcoes': {'A': '16', 'B': '32', 'C': '4', 'D': '8'},
+          'correta': 'D'},
+
+
+          {'titulo': 'Qual é a massa molar do oxigênio?',
+          'nivel': 'dificil',
+          'opcoes': {'A': '16', 'B': '32', 'C': '4', 'D': '8'},
+          'correta': 'A'},
+
+          {'titulo': 'Qual é a população do Brasil (em milhões)?',
+          'nivel': 'dificil',
+          'opcoes': {'A': '105', 'B': '200', 'C': '205', 'D': '210'},
           'correta': 'D'}
+
+
         ]
